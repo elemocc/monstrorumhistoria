@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Deformità umane</title>
+		<link rel= "stylesheet" href= "css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+	</head>
+
+	<body>
+
+
+		<div class="header_container">
+			<a href="index.html"><div class="header">
+				<h1>MONSTRORUM HISTORIA</h1>
+			</div></a>
+		</div>
+
+		<!-- segue top navbar-->
+		<div class="navbar">
+			<a href="index.html">Home</a>
+			<a href="opera.html">L'opera</a>
+			<a href="indice.html">Indice</a>
+			<a href="cerca.html">Cerca</a>
+			<a href="#" class="split"><span class="material-symbols-outlined">person</span> Accedi</a>
+		</div>
+		
+
+			<ul class="breadcrumb">
+				  <li><a href="index.html">Home</a></li>
+				  <li>Deformità umane</li>
+				</ul>
+
+
+		<div class="main">
+			<div class="sezione_filtri">
+				<h4>Filtra per:</h4>
+				<div class="filtri">
+						<button class="accordion">Ordine alfabetico</button>
+						<div class="panel">
+							<div class="ordine_alfabetico">
+								<button class="alphabeth_button">Dalla A alla Z</button>
+								<button class="alphabeth_button">Dalla Z alla A</button>
+							</div>
+						</div>
+
+						<button class="accordion">Capitolo</button>
+						<div class="panel">
+							<div class="lista_capitoli">
+							 	<input type="checkbox" id="cap1" name="cap1" value="cap1">
+								<label for="checkbox"> Cap.1</label><br>
+								<input type="checkbox" id="cap2" name="cap2" value="cap2">
+								<label for="cap2"> Cap.2</label><br>
+								<input type="checkbox" id="cap3" name="cap3" value="cap3">
+								<label for="cap3"> Cap.3</label><br>
+								<input type="checkbox" id="cap4" name="cap4" value="cap4">
+								<label for="cap4"> Cap.4</label><br>
+								<input type="checkbox" id="cap5" name="cap5" value="cap5">
+								<label for="cap5"> Cap.5</label><br>
+								<input type="checkbox" id="cap6" name="cap6" value="cap6">
+								<label for="cap6"> Cap.6</label><br>
+							</div>
+						</div>
+
+						<button class="accordion">Contenuti aggiuntivi</button>
+						<div class="panel">
+							<div class="contenuti_aggiuntivi">
+						  		<input type="checkbox" id="museo" name="museo" value="museo">
+								<label for="checkbox">Museo collegato</label><br>
+								<input type="checkbox" id="patologia" name="patologia" value="patologia">
+								<label for="patologia">Patologia individuata</label><br>
+								<input type="checkbox" id="mitologia" name="mitologia" value="mitologia">
+								<label for="mitologia">Rimandi mitologici</label><br>
+							</div>
+						</div>
+				</div>
+			</div>
+
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+	    /* Toggle between adding and removing the "active" class,
+	    to highlight the button that controls the panel */
+	    this.classList.toggle("active");
+
+	    /* Toggle between hiding and showing the active panel */
+	    var panel = this.nextElementSibling;
+	    if (panel.style.display === "block") {
+	      panel.style.display = "none";
+	    } else {
+	      panel.style.display = "block";
+	    }
+	  });
+	}
+			</script>
+
+			<div class="contenitore_foto">
+				
+				<div class="responsive2">
+					  <div class="gallery">
+					    <a href="puella.html">
+					      <img src="images/puella_sine_brachiis2.jpg" alt="Puella sine brachiis">
+					    </a>
+					    <div class="desc">
+					    <h4>Puella sine brachiis</h4>
+					    <p>Cap.VI - De prava conformatione brachiorum</p>
+					  	</div>
+					  </div>
+					</div>
+				<div class="responsive2">
+					  <div class="gallery">
+					    <a href="#">
+					      <img src="images/virgo_villosa.jpg" alt="Virgo villosa">
+					    </a>
+					    <div class="desc">
+					    <h4>Virgo villosa</h4>
+					    <p>Cap.VII - De monstrosa cutis foeditate</p>
+					  	</div>
+					  </div>
+					</div>
+
+					<div class="responsive2">
+					  <div class="gallery">
+					    <a href="#">
+					      <img src="images/arpia.jpg" alt="Arpia">
+					    </a>
+					    <div class="desc">
+					    <h4>Arpia</h4>
+					    <p>Cap.II - De monstro in genere</p>
+					  	</div>
+					  </div>
+					</div>
+
+					<div class="responsive2">
+					  <div class="gallery">
+					    <a href="#">
+					      <img src="images/infans.jpg" alt="infans monstrosus">
+					    </a>
+					    <div class="desc">
+					    <h4>Infans monstrosus</h4>
+					    <p>Cap.II - De monstro in genere</p>
+					  </div>
+					  </div>
+					</div>
+
+					<div class="responsive2">
+					  <div class="gallery">
+					    <a href="#">
+					      <img src="images/homo_bicorporis.jpg" alt="Homo bicorporis">
+					    </a>
+					    <div class="desc">
+					    <h4>Homo bicorporis</h4>
+					    <p>Cap.XI - De monstris bicorporibus</p>
+					  	</div>
+					  </div>
+					</div>
+					<div class="responsive2">
+					  <div class="gallery">
+					    <a href="#">
+					      <img src="images/monstrum_biceps.jpg" alt="Monstrum biceps">
+					    </a>
+					    <div class="desc">
+					    <h4>Monstrum biceps</h4>
+					    <p>Cap.III - De erratis naturae in formatura capitis</p>
+					  	</div>
+					  </div>
+					</div>
+					<div class="responsive2">
+					  <div class="gallery">
+					    <a href="#">
+					      <img src="images/infans_brachio_transposito.jpg" alt="Infans brachio transposito">
+					    </a>
+					    <div class="desc">
+					    <h4>Infans brachio transposito</h4>
+					    <p>Cap.VI - De prava conformatione brachiorum</p>
+					  	</div>
+					  </div>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+			<div class="pagination_container">
+				<div class="pagination">
+					  <a href="#">&laquo;</a>
+					  <a href="#" class="active">1</a>
+					  <a href="#">2</a>
+					  <a href="#">3</a>
+					  <a href="#">&raquo;</a>
+				</div>
+			</div>
+
+			
+
+		<footer>
+			<div class="container">
+				<div class="footer_content">
+					<h3>Serve aiuto?</h3>
+					<p><a href="progetto.html">Il progetto</a><p>
+					<p><a href="#">Bibliografia</a></p>
+					<p><a href="#">Contribuisci</a></p>
+					<p><a href="#">FAQ</a></p>
+				</div>
+				<div class="footer_content">
+					<h3>Contatti</h3>
+					<p>Elena Mocci</p>
+					<p>nome.cognome@esempio.com</p>
+					<p>+39 123 456 7890</p>
+				</div>
+				<div class="footer_content">
+					<p>Copyright tal del tali</p>
+				</div>
+			</div>
+		</footer>
+	</body>

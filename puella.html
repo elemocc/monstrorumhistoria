@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Puella sine brachiis</title>
+		<link rel= "stylesheet" href= "css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+	</head>
+
+	<body>
+		<!--segue header-->
+		<div class="header_container">
+			<a href="index.html"><div class="header">
+			<h1>MONSTRORUM HISTORIA</h1>
+			</div></a>
+		</div>
+		<!-- segue top navbar-->
+		<div class="navbar">
+		  <a href="index.html">Home</a>
+		  <a href="opera.html">L'opera</a>
+		  <a href="indice.html">Indice</a>
+		  <a href="cerca.html">Cerca</a>
+		  <a href="#" class="split"><span class="material-symbols-outlined">person</span> Accedi</a>
+
+		</div>
+		
+
+
+		<!--briciole di pane-->
+		<ul class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="opera.html">L'opera</a></li>
+			<li>Puella sine brachiis</li>
+		</ul>
+
+		<div class="img-magnifier-container">
+			<div class="cornice_foto">
+			<img id="puella_sine_bachiis" src="images/puella_sine_brachiis.jpg" width="800px">
+			</div>
+		</div>
+
+		<div class="icons_container">
+			<div class="icons_group">
+				<a href="#"><i class="fa fa-regular fa-heart"></i></a>
+				<a href="images/vitulus_biceps.jpg" download><i class="fa fa-solid fa-download"></i></a>				
+				<a href="#"><i class="fa fa-solid fa-link"></i></a>
+			</div>
+		</div>
+
+		<hr>
+<!--script del magnifier-->
+<script>
+function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+  /*create magnifier glass:*/
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+  /*insert magnifier glass:*/
+  img.parentElement.insertBefore(glass, img);
+  /*set background properties for the magnifier glass:*/
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 3;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+  /*execute a function when someone moves the magnifier glass over the image:*/
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /*prevent the magnifier glass from being positioned outside the image:*/
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /*set the position of the magnifier glass:*/
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /*display what the magnifier glass "sees":*/
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+ function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    // Get the bounding rectangle of the image
+    a = img.getBoundingClientRect();
+    // Calculate the cursor's position relative to the image
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    // Adjust for any page scrolling
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return { x: x, y: y };
+	}
+}
+</script>
+<script>
+/* Execute the magnify function: */
+magnify("puella_sine_bachiis", 3);
+/* Specify the id of the image, and the strength of the magnifier glass: */
+</script>
+		<div class="item_description">
+			<div class="item_infos">
+			<h2>Puella sine brachiis</h2>
+			<h3>Ragazza senza braccia
+			<h4>Il testo associato a questa illustrazione spiega:</h4>
+			<p>“Pariter Iacobus Ruffis meminit puellae sine bachiis natae Priuerni, anno mundi octingentesimo tertio supra tria millia, quae, praeter brachia, reliqua corporis parte optime erat constituta, ut in figura I unusquisque potest intueri".</p>
+			<p>“Allo stesso modo Giacomo Ruffo si ricorda di una ragazza nata senza braccia a Priverno, la quale, ad eccezione delle braccia, era completamente formata nella restante parte del corpo, come ciascuno può osservare nella figura I.”</p>
+			</div>
+		<div class="metadata">
+			<h3>Dettagli</h3>
+			
+				<p><span class="categorie">Capitolo</span>: VI, De prava conformatione brachiorum et manuum</p>
+				<p><span class="categorie">Pagina (ediz. originale)</span>: 476</p>
+				<p><span class="categorie DC.Title" >Nome nell'indice (ediz. originale)</span>: Puella sine brachiis icon</p>
+				<p><span class="categorie">Tipologia</span>: deformità umana</p>
+				<p><span class="categorie">Possibile patologia associabile</span>: amelia <a href="https://it.wikipedia.org/wiki/Amelia_(medicina)" target=”_blank”>(scopri di più <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#B17806"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>)</a></p>
+				<p><span class="categorie DC.Creator">Autore</span>: Ulisse Aldrovandi</p>
+				<p><span class="categorie DC.Creator">Altri autori</span>: Bartolomeo Ambrosini, Giovanni Battista Coriolano</p>
+				<p><span class="categorie DC.">Luogo di pubblicazione</span>: Bologna</p>
+				<p><span class="categorie DC.date">Data di pubblicazione</span>: 1657/1658</p>
+				<p><span class="categorie DC.publisher">Editori</span>: Marco Antonio Bernia, Giovanni Battista Ferroni, Nicolò Tebaldini</p>
+				<p><span class="categorie">Tecnica</span>: xilografia</p>
+				<p><span class="categorie">Codice SBN dell'opera</span>: USME025836</p>
+				<p><span class="categorie">Lingua dell'opera</span>: latino</p>
+				<p><span class="categorie">Supporto</span>: Libro a stampa</p>
+				<p><span class="categorie">Provider</span>: AMSHistorica - Università di Bologna</p>
+				<p><span class="categorie DC.RightsHolder">Detentore dei diritti</span>: Università di Bologna</p>
+				<p><span class="categorie DC.Rights">Copyright</span>: CC BY-NC-ND 4.0 (Attribution-NonCommercial-NoDerivatives 4.0)</p>
+			
+		</div>
+
+	</div>
+	<div class="interessa_anche">
+			<h3>Potrebbe interessarti anche:</h3>
+			<div class="gallery_container">
+				<div class="responsive">
+				  <div class="gallery">
+				    <a href="#">
+				      <img src="images/virgo_villosa.jpg" alt="Virgo villosa">
+				    </a>
+				    <div class="desc">
+				    <h4>Virgo villosa</h4>
+				    <p>Cap.VII - De monstrosa cutis foeditate</p>
+				  </div>
+				  </div>
+				</div>
+
+				<div class="responsive">
+				  <div class="gallery">
+				    <a href="#">
+				      <img src="images/arpia.jpg" alt="Arpia">
+				    </a>
+				    <div class="desc">
+				    <h4>Arpia</h4>
+				    <p>Cap.II - De monstro in genere</p>
+				  	</div>
+				  </div>
+				</div>
+
+				<div class="responsive">
+				  <div class="gallery">
+				    <a href="#">
+				      <img src="images/infans.jpg" alt="infans monstrosus">
+				    </a>
+				    <div class="desc">
+				    <h4>Infans monstrosus</h4>
+				    <p>Cap.II - De monstro in genere</p>
+				  </div>
+				  </div>
+				</div>
+
+				<div class="responsive">
+				  <div class="gallery">
+				    <a href="#">
+				      <img src="images/homo_bicorporis.jpg" alt="Homo bicorporis">
+				    </a>
+				    <div class="desc">
+				    <h4>Homo bicorporis</h4>
+				    <p>Cap.XI - De monstris bicorporibus</p>
+				  	</div>
+				  </div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+	</div> 
+
+		<div>
+		<footer>
+			<div class="container">
+				<div class="footer_content">
+					<h3>Serve aiuto?</h3>
+					<p><a href="progetto.html">Il progetto</a><p>
+					<p><a href="#">Bibliografia</a></p>
+					<p><a href="#">Contribuisci</a></p>
+					<p><a href="#">FAQ</a></p>
+				</div>
+				<div class="footer_content">
+					<h3>Contatti</h3>
+					<p>Elena Mocci</p>
+					<p>nome.cognome@esempio.com</p>
+					<p>+39 123 456 7890</p>
+				</div>
+				<div class="footer_content">
+					<p>Copyright tal del tali</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	</body>

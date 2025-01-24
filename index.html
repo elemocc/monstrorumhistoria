@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Monstrorum Historia</title>
+		<link rel= "stylesheet" href= "css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+			<META NAME="DC.Title" CONTENT="Monstrorum Historia"/>
+			<META NAME="DC.Creator" CONTENT="Elena Mocci"/>
+			<META NAME="DC.Subject" CONTENT="Illustrazioni, Monstrorum Historia, Ulisse Aldrovandi"/>
+			<META NAME="DC.Description" CONTENT="Raccolta delle illustrazioni presenti nell'opera Monstrorum Historia di Ulisse Aldrovandi"/>
+			<META NAME="DC.Date" CONTENT="2025/02/01"/>
+			<META NAME="DC.Type" CONTENT="Catalogo web"/>
+			<META NAME="DC.Source" CONTENT="Monstrorum historia. Cum Paralipomenis historiae omnium animalium. Bartholomaeus Ambrosinus ... labore, et studio uolumen composuit. Marcus Antonius Bernia in lucem edidit proprijs sumptibus ... cum indice copiosissimo"/>
+			<META NAME="DC.Language" CONTENT="it"/>
+	</head>
+
+	<body>
+		<!--segue header-->
+		<div class="header_container">
+		<a href="home.html"><div class="header">
+			<h1>MONSTRORUM HISTORIA</h1>
+		</div></a>
+	</div>
+
+		<!-- segue top navbar-->
+		<div class="navbar">
+		  <a class="active">Home</a>
+		  <a href="opera.html">L'opera</a>
+		  <a href="indice.html">Indice</a>
+		  <a href="cerca.html">Cerca</a>
+		  <a href="#" class="split"><span class="material-symbols-outlined">person</span> Accedi</a>
+		</div>
+		
+		<!-- descrizione del sito-->
+		<div id="presentazione_home">
+		<p>Questo sito raccoglie e rende possibile <span>consultare tutte le illustrazioni</span> presenti all'interno della Monstrorum Historia di Ulisse Aldrovandi. </p>
+		<p>Consulta i disegni, scarica le pagine ed esplora altro materiale relativo ad Aldrovandi.</p>
+		</div>
+		
+		<!-- sezione destinata a ricerca e carosello cliccabile -->
+		<div class="ricerca_per">
+			<h2 class="page_titles">Esplora per</h2>
+
+			<!--questo che segue è il carosello-->
+			<div class="carosello_container">
+				<div class="mySlides fade"><a href="deformita_umane.html">
+				    <img src="images/puella.jpg" style="width:100%">
+				    <div class="text">Deformità umane</div></a>
+			    </div>
+			    <div class="mySlides fade"><a href="">
+				    <img src="images/animali.jpg" style="width:100%">
+				    <div class="text">Deformità animali</div></a>
+			    </div>
+			    <div class="mySlides fade"><a href="">
+				    <img src="images/spiga.jpg" style="width:100%">
+				    <div class="text">Deformità vegetali</div></a>
+				</div>
+			  	<div class="mySlides fade"><a href="">
+				    <img src="images/sole.jpg" style="width:100%">
+				    <div class="text">Fenomeni celesti</div></a>
+			  	</div>
+			  	<!-- Next and previous buttons -->
+			  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br>
+
+				<!-- The dots/circles -->
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span>
+				  <span class="dot" onclick="currentSlide(2)"></span>
+				  <span class="dot" onclick="currentSlide(3)"></span>
+				  <span class="dot" onclick="currentSlide(4)"></span>
+				</div>
+			</div>
+
+			<script>  
+			let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+		</script>
+		
+
+		<!-- seconda sezione per inserire altre info utili-->
+		<div class="more_informations">
+			<h2 class="page_titles">Altro</h2>
+			<div class="row">
+			  <div class="column">
+			    <a href="#"><div class="card" id="card_1">
+			      <img src="images/Aldrovandi.jpg" alt="Aldrovandi" style="width:100%">
+			      <div class="container">
+			        <h2 class="card_titles">Ulisse Aldrovandi</h2>
+			        <p class="title">Informazioni sulla vita e le opere</p>
+			      </div>
+			    </div></a>
+			  </div>
+
+			  <div class="column">
+			   <a href="#"><div class="card" id="card_2">
+			      <img src="images/Monstrorum_historia.png" alt="Mike" style="width:100%">
+			      <div class="container">
+			        <h2 class="card_titles">La Monstrorum Historia</h2>
+			        <p class="title">L'opera, le edizioni</p>
+			      </div>
+			    </div></a>
+			  </div>
+
+			  <div class="column">
+			    <a href="#"><div class="card" id="card_3">
+			      <img src="images/museo.png" alt="John" style="width:100%">
+			      <div class="container">
+			        <h2 class="card_titles">Aldrovandi a Bologna</h2>
+			        <p class="title">Testi e collezioni di Aldrovandi a Bologna</p>
+			      </div>
+			    </div></a>
+			  </div>
+			</div>
+		</div>
+		<div class="visualizzatore_pdf">
+			<h2 class="page_titles">Sfoglia l'intera opera</h2>
+			<p>Sfoglia l'opera integrale nella scansione fornita dall'Università di Bologna.</p>
+			<p>Vuoi consultare il libro cartaceo? <a href="https://sol.unibo.it/SebinaOpac/resource/vlyssis-aldrouandi-monstrorum-historia-cum-paralipomenis-historiae-omnium-animalium-bartholomaeus-am/UBO02896845" target=”_blank”>(Vai al sito del sistema bibliotecario<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#B17806"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>)</a></p>
+			<iframe src="https://historica.unibo.it/static/extra/mirador-3.0.0/index.html?manifest=/json/iiif/20.500.14008/78076/265809/manifest?&maxheight=600" title="Image viewer"allowfullscreen frameborder="0"></iframe>
+		</div>
+
+		<div class="tagcloud_container">
+			<div class="blocco_testo">
+			<h3>La frequenza dei termini all'interno della raccolta</h3>
+			<p>Passa il mouse sopra le parole per visualizzare le occorrenze</p>
+			</div>
+			<iframe style='width: 600px; height: 400px;' src='https://voyant-tools.org/tool/Cirrus/?palette=36cb9f02798e7bac14cc09783e0c7b3b&stopList=keywords-349f397949153fe921ec8399c6564752&whiteList=&visible=100&corpus=9eaa1984a3908dab4d9015e93c12b1a6'></iframe>
+		</div>
+
+		<!-- segue footer -->
+		<footer>
+			<div class="container">
+				<div class="footer_content">
+					<h3>Serve aiuto?</h3>
+					<p><a href="progetto.html">Il progetto</a><p>
+					<p><a href="#">Bibliografia</a></p>
+					<p><a href="#">Contribuisci</a></p>
+					<p><a href="#">FAQ</a></p>
+				</div>
+				<div class="footer_content">
+					<h3>Contatti</h3>
+					<p>Elena Mocci</p>
+					<p>nome.cognome@esempio.com</p>
+					<p>+39 123 456 7890</p>
+				</div>
+				<div class="footer_content">
+					<p>Copyright tal del tali</p>
+				</div>
+			</div>
+		</footer>
+
+	</body>
